@@ -1,0 +1,31 @@
+Library: C:\Users\Bekim\Unity Projects\Simple PROJECT\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--platform=Android
+--backend=burst-llvm-15
+--target=ARMV8A_AARCH64
+--global-safety-checks-setting=Off
+--meta-data-generation=False
+--dump=Function
+--float-precision=Standard
+--target-framework=NetFramework
+--assembly-defines=Assembly-CSharp-firstpass;
+--assembly-defines=Assembly-CSharp;
+--assembly-defines=Mono.Security;
+--assembly-defines=mscorlib;
+--assembly-defines=System.Configuration;
+--assembly-defines=System.Core;
+--assembly-defines=System;
+--assembly-defines=System.Numerics;
+--assembly-defines=System.Xml;
+--assembly-defines=Unity.Mathematics;
+--assembly-defines=Unity.Notifications.Android;
+--assembly-defines=Unity.RenderPipelines.Core.Runtime;
+--assembly-defines=Unity.TextMeshPro;
+--assembly-defines=UnityEngine;
+--generate-link-xml=Temp\burst.link.xml
+--temp-folder=C:\Users\Bekim\Unity Projects\Simple PROJECT\Temp\Burst
+--key-folder=C:/Program Files/Unity/Hub/Editor/2023.1.16f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--decode-folder=C:\Users\Bekim\Unity Projects\Simple PROJECT\Library\Burst
+--output=C:\Users\Bekim\Unity Projects\Simple PROJECT\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--pdb-search-paths=Temp/ManagedSymbols/
+
+
