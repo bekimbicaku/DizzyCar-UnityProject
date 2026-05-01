@@ -1,0 +1,47 @@
+{
+  "name": "com.unity.ads",
+  "displayName": "Advertisement Legacy",
+  "version": "4.16.4",
+  "unity": "2021.3",
+  "description": "Connect your game to the Unity Ads Network for iOS and Android to quickly and effectively monetize your games.\n\nNOTE: Unity has joined forces with ironSource and recommends using Unity LevelPlay for ad mediation (instead of this package). \n\nThis package will still be supported but no longer updated. To install Unity LevelPlay, use the Ads Mediation package (available below) or the LevelPlay plugin-in at https://developers.is.com/ironsource-mobile/unity/unity-plugin/.\n\nSupported platforms:\n- Android\n- iOS\n",
+  "_upm": {
+    "gameService": {
+      "groupIndex": 4,
+      "groupName": "Monetization",
+      "genericDashboardUrl": "https://unityads.unity3d.com/help/index",
+      "projectDashboardUrl": "https://dashboard.unity3d.com/organizations/{0}/projects/{1}/monetization/about",
+      "projectDashboardUrlType": "OrganizationKeyAndProjectGuid",
+      "configurePath": "Project/Services/Ads"
+    },
+    "supportedPlatforms": [
+      "Android",
+      "iOS"
+    ],
+    "changelog": "Fixed an issue that might prevent banners from refreshing correctly in projects using Unity Editor 6.0 or newer"
+  },
+  "keywords": [
+    "ads",
+    "unity"
+  ],
+  "dependencies": {
+    "com.unity.ugui": "1.0.0",
+    "com.unity.modules.androidjni": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "UnityAds Example App",
+      "description": "Contains sample scene and scripts for loading and showing ads with the Unity Ads SDK",
+      "path": "Samples~/UnityAdsExample"
+    }
+  ],
+  "upmCi": {
+    "footprint": "ee0cd5114ffa287a33dd9c5e9028324b9073157b"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.ads@4.16/manual/index.html",
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/unity-ads-sdk.git",
+    "type": "git",
+    "revision": "0d444ff6e757e3ab9c63fb91dd158bea21891833"
+  },
+  "_fingerprint": "e8922582805922405e97351c15d313c7a56f561d"
+}

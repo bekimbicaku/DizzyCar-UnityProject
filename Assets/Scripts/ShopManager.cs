@@ -21,6 +21,7 @@ public class ShopManager : MonoBehaviour
                 car.isUnlocked = PlayerPrefs.GetInt(car.name, 0)== 0 ? false: true;
         }
         currentCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
+        currentCarIndex = Mathf.Clamp(currentCarIndex, 0, carModels.Length - 1);
         foreach (GameObject car in carModels)
             car.SetActive(false);
 
@@ -47,6 +48,7 @@ public class ShopManager : MonoBehaviour
             return;
 
         PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
+        PlayerPrefs.Save();
     }
 
     public void ChangePrevious()
@@ -63,6 +65,7 @@ public class ShopManager : MonoBehaviour
             return;
 
         PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
+        PlayerPrefs.Save();
     }
     public void UnlockCar()
     {
@@ -72,6 +75,7 @@ public class ShopManager : MonoBehaviour
         PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
         c.isUnlocked = true;
         PlayerPrefs.SetInt("NumberOfCoins", PlayerPrefs.GetInt("NumberOfCoins", 0) - c.price);
+        PlayerPrefs.Save();
     }
     private void UpdateUI()
     {
@@ -84,7 +88,7 @@ public class ShopManager : MonoBehaviour
         {
             buyButton.gameObject.SetActive(true);
             buyButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy-" + c.price;
-            if(c.price < PlayerPrefs.GetInt("NumberOfCoins", 0))
+            if(c.price <= PlayerPrefs.GetInt("NumberOfCoins", 0))
             {
                 buyButton.interactable = true;
             }

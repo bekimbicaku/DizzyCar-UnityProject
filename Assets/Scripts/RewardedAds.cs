@@ -29,6 +29,12 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     // Load content to the Ad Unit:
     public void LoadAd()
     {
+        if (string.IsNullOrWhiteSpace(_adUnitId))
+        {
+            Debug.LogWarning("RewardedAds: ad unit id is empty, skipping ad load.");
+            return;
+        }
+
         // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
@@ -42,7 +48,11 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         if (adUnitId.Equals(_adUnitId))
         {
             // Configure the button to call the ShowAd() method when clicked:
-            _showAdButton.onClick.AddListener(ShowAd);
+            if (_showAdButton != null)
+            {
+                _showAdButton.onClick.RemoveListener(ShowAd);
+                _showAdButton.onClick.AddListener(ShowAd);
+            }
             // Enable the button for users to click:
            // _showAdButton.interactable = true;
         }
@@ -51,6 +61,12 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     // Implement a method to execute when the user clicks the button:
     public void ShowAd()
     {
+        if (string.IsNullOrWhiteSpace(_adUnitId))
+        {
+            Debug.LogWarning("RewardedAds: ad unit id is empty, skipping ad show.");
+            return;
+        }
+
         // Disable the button:
         //_showAdButton.interactable = false;
         // Then show the ad:
@@ -89,6 +105,9 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     void OnDestroy()
     {
         // Clean up the button listeners:
-        _showAdButton.onClick.RemoveAllListeners();
+        if (_showAdButton != null)
+        {
+            _showAdButton.onClick.RemoveListener(ShowAd);
+        }
     }
 }

@@ -1,0 +1,5 @@
+C:/Users/Bekim/Unity Projects/Dizzy Car/.utmp/RelWithDebInfo/2ck3t3m1/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Bekim/Unity Projects/Dizzy Car/.utmp/RelWithDebInfo/2ck3t3m1/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/Bekim/Unity Projects/Dizzy Car/.utmp/RelWithDebInfo/2ck3t3m1/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/Bekim/Unity Projects/Dizzy Car/.utmp/RelWithDebInfo/2ck3t3m1/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/Bekim/Unity Projects/Dizzy Car/.utmp/RelWithDebInfo/2ck3t3m1/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

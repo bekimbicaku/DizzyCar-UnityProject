@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
 
 public class CheckInternet : MonoBehaviour
@@ -19,10 +17,9 @@ public class CheckInternet : MonoBehaviour
 
     IEnumerator CheckInternetConnection()
     {
-        UnityWebRequest request = new UnityWebRequest("http://google.com");
-        yield return request.SendWebRequest();
-
-        if(request.error != null)
+        bool hasInternet = Application.internetReachability != NetworkReachability.NotReachable;
+        yield return null;
+        if (!hasInternet)
         {
             loadingText.gameObject.SetActive(true);
             TryAgain.gameObject.SetActive(true);

@@ -1,0 +1,17 @@
+<dependencies>
+    <androidPackages>
+        <androidPackage spec="com.unity3d.ads:unity-ads:[4.16.3,4.17[">
+            <repositories>
+                <repository>https://maven.google.com/</repository>
+            </repositories>
+        </androidPackage>
+    </androidPackages>
+
+    <iosPods>
+        <iosPod name="UnityAds" version="~> 4.16.3">
+            <sources>
+                <source>https://github.com/CocoaPods/Specs</source>
+            </sources>
+        </iosPod>
+    </iosPods>
+</dependencies>
